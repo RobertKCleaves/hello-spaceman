@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Jake</title>  
+        <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+                <img id="skyTexture" src="http://i.imgur.com/EcT6CCv.jpg"><!-- Find more 360 stuff -->
+                <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+                <img id="sphereTexture" src="test-sphere.jpg">
+                <a-asset-item id="teapot" src="https://cdn.glitch.com/6dcf0c5e-dc5e-4ee2-b0c1-0dd52147e7b4%2Fwt_teapot.obj?1505067102012"></a-asset-item>
+            </a-assets>
+            
+            <a-sphere src="#sphereTexture" position="0 2 5" radius="1.25" color="#fff"></a-sphere>
+            
+            <a-entity obj-model="obj: #teapot" position="-0.9 0.2 -4"></a-entity>
+
+            <a-sky src="#sphereTexture"></a-sky>
+
+            <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
+
+            <a-light type="point" intensity="1" position="1 6 1"></a-light>
+            <a-light type="point" intensity="1" position="0 0 0"></a-light>
+            <a-light type="ambient"></a-light>
+
+            <a-text value="Hello, Jake" color="black"
+            position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+        </a-scene>
+    </body>
+</html>
