@@ -10,23 +10,23 @@
         <a-scene>
             <a-assets>
                 <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-                <img id="skyTexture" src="http://i.imgur.com/EcT6CCv.jpg"><!-- Find more 360 stuff -->
+                <img id="skyTexture" src="https://i.imgur.com/let82Vr.jpg"><!-- Find more 360 stuff -->
                 <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
-                <img id="sphereTexture" src="SMSsphere.jpg">
+                <img id="sphereTexture" src="SMS-sphere.jpg">
                 <a-asset-item id="teapot" src="https://cdn.glitch.com/6dcf0c5e-dc5e-4ee2-b0c1-0dd52147e7b4%2Fwt_teapot.obj?1505067102012"></a-asset-item>
             </a-assets>
             
-            <a-sphere src="#sphereTexture" position="0 2 5" radius="1.25" rotation="0 90 0"></a-sphere>
+            <a-sphere src="#sphereTexture" position="0 1.5 5" radius="1.25" rotation="0 90 0"></a-sphere>
             
             <a-entity obj-model="obj: #teapot" position="-0.9 0.2 -4"></a-entity>
 
             <a-sky src="#skyTexture"></a-sky>
 
-            <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
+            <!-- <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane> -->
 
             <a-light type="point" intensity="1" position="1 6 1"></a-light>
             <a-light type="point" intensity="1" position="0 0 0"></a-light>
-            <a-light type="ambient"></a-light>
+            <!-- <a-light type="ambient"></a-light> -->
 
             <a-text value="Hello, Jake" color="black"
             position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
