@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello Spaceman</title>  
+        <title>Hello Spaceman</title>
         <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
         <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
@@ -16,14 +16,14 @@
                 <a-asset-item id="teapot" src="https://cdn.glitch.com/6dcf0c5e-dc5e-4ee2-b0c1-0dd52147e7b4%2Fwt_teapot.obj?1505067102012"></a-asset-item>
                 <a-asset-item id="apollo-soyuz" src="apollo_soyuz_carbajal.3ds"></a-asset-item>
             </a-assets>
-            
+
             <a-sphere
                 src="#sphereTexture"
                 position="0 1.5 5"
-                radius="1.25" 
+                radius="1.25"
                 rotation="0 90 0">
             </a-sphere>
-            
+
             <a-entity
                 obj-model="obj: #teapot"
                 position="-0.9 2 -4"
@@ -36,20 +36,23 @@
 
             <!-- <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane> -->
 
-            <a-light type="point"
+            <a-light
+                type="point"
                 intensity="1"
                 position="1 6 1"></a-light>
-                
-            <a-light type="point"
+
+            <a-light
+                type="point"
                 intensity="1"
                 position="0 0 0"></a-light>
             <!-- <a-light type="ambient"></a-light> -->
 
-            <a-text value="Hello, Spaceman"
+            <a-text
+                value="Hello, Spaceman"
                 color="white"
                 position="-0.9 1.25 -3"
                 scale="1.5 1.5 1.5"></a-text>
-                
+
         </a-scene>
     </body>
 </html>
