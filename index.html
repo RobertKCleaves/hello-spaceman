@@ -9,12 +9,13 @@
     <body>
         <a-scene>
             <a-assets>
-                <img id="skyTexture" src="https://i.imgur.com/let82Vr.jpg"><!-- Find more 360 stuff -->
+                <img id="skyTexture" src="https://i.imgur.com/let82Vr.jpg">
                 <img id="sphereTexture" src="SMS-sphere.jpg">
                 <a-asset-item id="teapot" src="teapot.obj"></a-asset-item>
-                <a-asset-item id="apollo-soyuz" src="apollo_soyuz_carbajal.3ds"></a-asset-item>
+                <!-- a-asset-item NASA 3D Model -->
             </a-assets>
 
+            <!-- // Spaceman Stories Logo // -->
             <a-sphere
                 src="#sphereTexture"
                 position="0 1.5 5"
@@ -22,13 +23,15 @@
                 rotation="0 90 0">
             </a-sphere>
 
+            <!-- // Utah Teapot // -->
             <a-entity
                 obj-model="obj: #teapot"
                 position="-0.9 2 -4"
                 rotation="34 20 30">
             </a-entity>
+            
             <!-- v Find way to get a NASA 3D model for heaven's sake v -->
-            <!-- <a-entity obj-model="3ds: #apollo-soyuz" position="-0.9 0.2 -4"></a-entity> -->
+            <!-- <a-entity collada-model="#" position=""></a-entity> -->
 
             <a-sky src="#skyTexture"></a-sky>
 
