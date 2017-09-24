@@ -2,18 +2,39 @@
 <html>
     <head>
         <title>Hello Spaceman</title>
-        <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-        <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+        <!--TODO: I need a favicon-->
     </head>
     <body>
         <a-scene>
             <a-assets>
                 <img id="skyTexture" src="https://i.imgur.com/let82Vr.jpg">
-                <img id="sphereTexture" src="SMS-sphere.jpg">
                 <a-asset-item id="teapot" src="teapot.obj"></a-asset-item>
-                <!-- a-asset-item NASA 3D Model -->
+                <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+                <img id="sphereTexture" src="SMS-sphere.jpg">
+                <a-asset-item id="iss" src="international_space_station/scene.gltf"></a-asset-item>
+                <!-- a-asset-item Retrorocket -->
             </a-assets>
+
+            <a-sky src="#skyTexture"></a-sky>
+
+            <a-entity
+                text-geometry="value: Hello Spaceman"
+                position="-2.25 1.25 -3">
+            </a-entity>
+
+            <!-- // Utah Teapot // -->
+            <a-entity
+                obj-model="obj: #teapot"
+                position="-0.9 2 -4"
+                rotation="34 20 30">
+            </a-entity>
+
+            <!--v TODO: Retro Rocket v-->
+            <a-entity
+                >
+            </a-entity>
 
             <!-- // Spaceman Stories Logo // -->
             <a-sphere
@@ -23,34 +44,30 @@
                 rotation="0 90 0">
             </a-sphere>
 
-            <!-- // Utah Teapot // -->
-            <a-entity
-                obj-model="obj: #teapot"
-                position="-0.9 2 -4"
-                rotation="34 20 30">
-            </a-entity>
-            
-            <!-- v Find way to get a NASA 3D model for heaven's sake v -->
-            <!-- <a-entity collada-model="#" position=""></a-entity> -->
+            <!--v TODO: ISS Model over Spaceman Stories Logo v-->
+            <a-entity gltf-model="url(international_space_station/scene.gltf)" position="1000 1000 1000"></a-entity>
 
-            <a-sky src="#skyTexture"></a-sky>
+            <!--v TODO Find something literary v-->
+            <a-light
+                type="point"
+                intensity="1"
+                position="0 2 0">
+            </a-light>
+
 
             <a-light
                 type="point"
                 intensity="1"
-                position="1 6 1"></a-light>
+                position="1000 500 1000">
+            </a-light>
 
             <a-light
                 type="point"
                 intensity="1"
-                position="0 0 0"></a-light>
+                position="100 500 1000"
+                color="blue"
+            </a-light>
             <!-- <a-light type="ambient"></a-light> -->
-
-            <a-text
-                value="Hello, Spaceman"
-                color="white"
-                position="-0.9 1.25 -3"
-                scale="1.5 1.5 1.5"></a-text>
 
         </a-scene>
     </body>
